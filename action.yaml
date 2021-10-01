@@ -1,0 +1,31 @@
+# action.yml
+name: 'Run Cypher Query'
+description: 'Run neo4j cypher query from file'
+inputs:
+  address:  # id of input
+    description: 'Address of database'
+    required: true
+    default: 'localhost:7687'
+  username:  # id of input
+    description: 'Username of database'
+    required: true
+    default: 'neo4j'
+  password:  # id of input
+    description: 'password of database'
+    required: true
+    default: 'password'
+  file:  # id of input
+    description: 'cypher file'
+    required: true
+    default: '.'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.address }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.file }}
