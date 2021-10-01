@@ -29,3 +29,8 @@ runs:
     - ${{ inputs.username }}
     - ${{ inputs.password }}
     - ${{ inputs.file }}
+
+
+branding:
+  icon: 'globe'  
+  color: 'blue'
