@@ -19,9 +19,9 @@ jobs:
   
     - name: Run Cypher
       id: cypher
-      uses: cbastn/hello-world-docker-action@v1
+      uses: cbastn/cypher-shell-docker@v1
       with:
-          address: ${{ secrets.Address }}
-          username: ${{ secrets.Username }}
-          password: ${{ secrets.Password }}
+          address: ${{ secrets.ADDRESS }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           file: './Sample.cypher'
