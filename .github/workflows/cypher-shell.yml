@@ -20,8 +20,12 @@ jobs:
     - name: Run Cypher
       id: cypher
       uses: cbastn/cypher-shell-docker@v3
+      env: 
+        ADDRESS: ${{ secrets.ADDRESS }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
       with:
-          address: ${{ secrets.ADDRESS }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          address: "$ADDRESS"
+          username: "$USERNAME"
+          password: "$PASSWORD"
           file: './Sample.cypher'
