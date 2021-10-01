@@ -30,7 +30,7 @@ with:
   username: ${{ secrets.Username }}
   password: ${{ secrets.Password }}
   file: './Sample.cypher'
-```yaml
+```
 ## Future support 
 
 - Running multiple cypher files one after the other
