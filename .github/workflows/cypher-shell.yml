@@ -19,7 +19,7 @@ jobs:
   
     - name: Run Cypher
       id: cypher
-      uses: cbastn/cypher-shell-docker@v1
+      uses: cbastn/cypher-shell-docker@v2
       with:
           address: 'neo4j+s://1affca72.databases.neo4j.io'
           username: 'neo4j'
