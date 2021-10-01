@@ -30,7 +30,6 @@ runs:
     - ${{ inputs.password }}
     - ${{ inputs.file }}
 
-
 branding:
   icon: 'globe'  
   color: 'blue'

@@ -22,13 +22,15 @@ This action connects to a neo4j database and runs the cypher query in the file s
 
 ## Example usage
 
+```yaml
+uses: actions/checkout@v2
 uses: cbastn/cypher-shell-docker@v1
 with:
   address: ${{ secrets.Address }}
   username: ${{ secrets.Username }}
   password: ${{ secrets.Password }}
   file: './Sample.cypher'
-
+```yaml
 ## Future support 
 
 - Running multiple cypher files one after the other
