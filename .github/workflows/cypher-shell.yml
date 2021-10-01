@@ -24,4 +24,4 @@ jobs:
           address: 'neo4j+s://1affca72.databases.neo4j.io'
           username: 'neo4j'
           password: 's3-HFzOriBZq-9jMUjhQ98wTLJC6p2Sa1PGlTDWsxM0'
-          file: './SampleDbCreate.cypher'
+          file: './Sample.cypher'
