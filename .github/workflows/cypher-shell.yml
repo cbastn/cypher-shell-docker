@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  
+    - name: Run Cypher
+      id: cypher
+      uses: cbastn/hello-world-docker-action@v1
+      with:
+          address: ${{ secrets.Address }}
+          username: ${{ secrets.Username }}
+          password: ${{ secrets.Password }}
+          file: './Sample.cypher'
