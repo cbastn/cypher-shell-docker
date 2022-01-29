@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: cbastn/cypher-shell-docker@d8d49cebe48364af6fab8e345111080c93e4274d
+    - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
   
     - name: Run Cypher
       id: cypher
-      uses: cbastn/cypher-shell-docker@v1
+      uses: cbastn/cypher-shell-docker@d8d49cebe48364af6fab8e345111080c93e4274d
       with:
           address: ${{ secrets.ADDRESS }}
           username: ${{ secrets.USERNAME }}
