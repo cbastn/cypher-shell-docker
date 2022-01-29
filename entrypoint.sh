@@ -1,9 +1,12 @@
-#!/bin/sh -l
+#!/bin/bash
 
-#loop through user input $4 and run the cypher query
-for var in "$@"
+argc=($@)
+address=$1
+user=$2
+pass=$3
+
+for (( c=3; c<$#; c++ ))
 do
-    echo "$var"
+   echo 'Running cypher file:' ${argc[$c]}
+   #cypher-shell -a $address -u $user -p $pass -f ${argc[$c]}
 done
-
-# cypher-shell -a $1 -u $2 -p $3 -f $4
