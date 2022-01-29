@@ -18,7 +18,7 @@ This action connects to a neo4j database and runs the cypher query in the file s
 
 ## `File`
 
-**Required** The file containing the cypher query to run `.`.
+**Required** The file path containing the cypher query to run `.`.
 
 ## Example usage
 

@@ -7,7 +7,7 @@ RUN apt install curl -y
 #install jdk 
 RUN apt install openjdk-17-jre-headless -y
 #curl cypher-shell 
-RUN curl --url https://dist.neo4j.org/cypher-shell/cypher-shell_4.3.0_all.deb --output /tmp/cypher-shell.deb
+RUN curl --url https://dist.neo4j.org/cypher-shell/cypher-shell_4.4.0_all.deb --output /tmp/cypher-shell.deb
 #install cypher-shell
 RUN dpkg -i /tmp/cypher-shell.deb
 
