@@ -27,3 +27,4 @@ jobs:
           file: | 
                 './Sample.cypher'
                 '.testFile.cypher'
+                '.testFile1.cypher'
