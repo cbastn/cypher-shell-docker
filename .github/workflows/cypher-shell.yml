@@ -24,4 +24,4 @@ jobs:
           address: ${{ secrets.ADDRESS }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          file: './Sample.cypher'
+          file: './Directory'
