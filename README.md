@@ -1,6 +1,6 @@
 # Neo4j Cypher-Shell Action
 
-This action connects to a neo4j database and runs the cypher query in the file specified. 
+This action connects to a neo4j database and runs the cypher query in the file or files in a directory specified. 
 
 ## Inputs
 
@@ -18,7 +18,7 @@ This action connects to a neo4j database and runs the cypher query in the file s
 
 ## `File`
 
-**Required** The file path containing the cypher query to run `.`.
+**Required** The directory path or file path containing the cypher query to run `.`.
 
 ## Example usage
 
@@ -31,6 +31,3 @@ with:
   password: ${{ secrets.Password }}
   file: './Sample.cypher'
 ```
-## Future support 
-
-- Running multiple cypher files one after the other
