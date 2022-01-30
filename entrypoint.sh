@@ -8,12 +8,12 @@ search_dir=$4
 if [[ -d $search_dir ]]; then
    for file in "$search_dir"/*
    do
-#    cypher-shell -a $address -u $user -p $pass -f $file
+   cypher-shell -a $address -u $user -p $pass -f $file
    echo "$file"
    done
 elif [[ -f $search_dir ]]; then
-#    cypher-shell -a $address -u $user -p $pass -f $file
-   echo "$file"
+   cypher-shell -a $address -u $user -p $pass -f $search_dir
+   echo "$search_dir"
 else
    echo not valid
    exit 1
