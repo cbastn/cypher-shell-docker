@@ -19,7 +19,7 @@ jobs:
   
     - name: Run Cypher
       id: cypher
-      uses: cbastn/cypher-shell-docker@0e37943dec8aa8d67aec64b822a00f3f9610cbf1
+      uses: cbastn/cypher-shell-docker@02c81918dab4d76916b265b39a3025b6d63d922d
       with:
           address: ${{ secrets.ADDRESS }}
           username: ${{ secrets.USERNAME }}
